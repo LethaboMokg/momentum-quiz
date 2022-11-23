@@ -48,12 +48,6 @@ function Quiz() {
 
 	let currentQuiz = 0;
 
-	// console.log(getAuth().currentUser.uid)""
-
-	// let currentQuestion = "Current questions"
-	// const uid = getAuth().currentUser.uid;
-
-
 	const dbRef = ref(getDatabase())
 
 
@@ -249,11 +243,16 @@ function Quiz() {
 		
 			return (
 				
-				<><div className='app_'>
+				<>
+				
+				{/* <div className ="topr"><img src='/image.png'></img></div> */}
+				<div className='app_'>
 
 		
 					{showScore ? (
+						
 					<>
+					
 						<div className='score-section'>
 							{<br />}
 							{<br />}
@@ -297,7 +296,10 @@ function Quiz() {
 						</>
 					)}
 		
-				</div></>
+				</div>
+				{/* <div className ="bottomr"><img src='/logo.jpg' width="100px" alt=""></img></div> */}
+				</>
+				
 		
 			);
 

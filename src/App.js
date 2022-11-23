@@ -3,6 +3,8 @@ import Home from "./Pages/Home";
 import Loginform from "./Pages/loginform";
 import Quiz from "./Pages/Quiz";
 import SocialShare from "./Pages/SocialShare";
+import Thanks from "./Pages/thanks";
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path = "/SocialShare" element ={<SocialShare/>}/>
+        <Route path="/thanks" element={<Thanks />} />
       </Routes>
     </Router>
   );

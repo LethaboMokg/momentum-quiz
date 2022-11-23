@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Whitney-Book";
+  font-family: "Caliri";
   src: url(/fonts/Whitney-Book.otf) format("opentype");
 }
 
@@ -7,14 +7,13 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Calibri',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 * {
-  font-family: "Whitney-Book", 'Helvetica', sans-serif;
+  font-family: "Calibri", sans-serif;
   
 }
 /* .topright {
@@ -169,10 +168,10 @@ body {
 }
 
 .here-btn {
-  /* transform: translate(35%, -10%); */
-  /*padding: 10px;**/
+
   width: 70%;
   border: none;
+  
 }
 
 /* ========== MEDIA QUERIES ========== */
@@ -184,13 +183,24 @@ body {
   }
 
   .app_ {
-    /* margin-left: 5%; */
     width: 80%;
   }
+/* 
+  .topr {
+    justify-self: flex-end;
+    padding: 16px;
+    
+}
+
+  .bottomr {
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding: 16px;
+} */
 
   .answered {
     width: 100%;
-    /* margin-left: 20%; */
+
   }
 
   .here-btn {
