@@ -99,7 +99,7 @@ function Quiz() {
 
 			const questions = [
 				{
-					questionText: 'How do you ensure that your financial affairs are in order should you pass?',
+					questionText: 'How do you ensure that your financial affairs are in order should you pass',
 					answerOptions: [
 						{ answerText: 'Budget', isCorrect: false },
 						{ answerText: 'Estate Planning', isCorrect: false },
@@ -108,7 +108,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'How do we prepare ourselves for a time when we can no longer work?',
+					questionText: 'How do we prepare ourselves for a time when we can no longer work',
 					answerOptions: [
 						{ answerText: 'Risk Management', isCorrect: false },
 						{ answerText: 'Retirement Planning', isCorrect: true },
@@ -117,7 +117,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'What do we call all the things that we own?',
+					questionText: 'What do we call all the things that we own',
 					answerOptions: [
 						{ answerText: 'Assets', isCorrect: true },
 						{ answerText: 'Budget', isCorrect: false },
@@ -126,7 +126,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'How do we ensure that our money works for us?',
+					questionText: 'How do we ensure that our money works for us',
 					answerOptions: [
 						{ answerText: 'Gold', isCorrect: false },
 						{ answerText: 'Budget', isCorrect: false },
@@ -135,7 +135,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'What do we call the individual who advises clients on the best way to make money moves?',
+					questionText: 'What do we call the individual who advises clients on the best way to make money moves',
 					answerOptions: [
 						{ answerText: 'Banker', isCorrect: false },
 						{ answerText: 'Insurance Agent', isCorrect: false },
@@ -153,7 +153,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'Who analyzes clients\' overall financial situations?',
+					questionText: 'Who analyzes clients\' overall financial situations',
 					answerOptions: [
 						{ answerText: 'Insurance Agent', isCorrect: false },
 						{ answerText: 'Budget Analyst', isCorrect: false },
@@ -162,7 +162,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'Imagine that the interest rate on your savings account was 1% per year and inflation (the pace at which prices increase) was 2% per year. After 1 year, would you be able to buy more than, exactly the same as, or less than today with the money in this account?',
+					questionText: 'Imagine that the interest rate on your savings account was 1% per year and inflation (the pace at which prices increase) was 2% per year. After 1 year, would you be able to buy more than, exactly the same as, or less than today with the money in this account',
 					answerOptions: [
 						{ answerText: 'More than today', isCorrect: false },
 						{ answerText: 'Exactly the same as today', isCorrect: false },
@@ -170,7 +170,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'What do we call a  list of assets and liabilities at a specific point of time',
+					questionText: 'What do we call a  list of assets and liabilities at a specific point of time ',
 					answerOptions: [
 						{ answerText: 'Balance Sheet', isCorrect: true },
 						{ answerText: 'Cash Flow', isCorrect: false },
@@ -179,7 +179,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'Considering a long time period (for example 10 or 20 years), which asset described below normally gives the highest return?',
+					questionText: 'Considering a long time period (for example 10 or 20 years), which asset described below normally gives the highest return',
 					answerOptions: [
 						{ answerText: 'Savings account', isCorrect: false },
 						{ answerText: 'Government bonds', isCorrect: false },
@@ -187,7 +187,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'When a person invests his or her money among different things (assets), does the risk of losing a lot of money increase, decrease or stay the same?',
+					questionText: 'When a person invests his or her money among different things (assets), does the risk of losing a lot of money increase, decrease or stay the same',
 					answerOptions: [
 						{ answerText: 'Increase', isCorrect: false },
 						{ answerText: 'Decrease', isCorrect: true },
@@ -195,14 +195,14 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'True or false, you can lose your money when investing?',
+					questionText: 'True or false, you can lose your money when investing',
 					answerOptions: [
 						{ answerText: 'True', isCorrect: true },
 						{ answerText: 'False', isCorrect: false },
 					],
 				},
 				{
-					questionText: 'True or false, Compound interest is the interest you earn on interest.',
+					questionText: 'True or false, Compound interest is the interest you earn on interest',
 					answerOptions: [
 						{ answerText: 'True', isCorrect: true },
 						{ answerText: 'False', isCorrect: false },
