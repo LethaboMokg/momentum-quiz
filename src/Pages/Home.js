@@ -12,7 +12,7 @@ function Home (){
   return(
     <div className="App">
     
-        <img className='img' src={require('./images/SOS-Festival logo.png')}  />
+        <img className='img' src='/SOS-Festival logo.png' />
     
       <p><b>Financial success</b> is within your control </p>
       <p>Welcome to the Science of Success make your money moves quiz brought to you by Momentum and our CSI success partner, We Think Code. 

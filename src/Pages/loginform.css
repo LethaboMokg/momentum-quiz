@@ -13,9 +13,12 @@ input::placeholder {
 }
 
 .topright {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    image: url('images/RSImage.png');
+    justify-self: flex-end;
+    padding: 15px;
+}
 
+.bottomright {
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding: 15px;
 }

@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-img {
+.img {
     width: 35%;
 }
 
@@ -71,16 +71,16 @@ img {
 
 
   
-  img {
+  .img {
     width: 50%;
 
   }
 
   p {
- 
-    width: 50%;
-    margin-left: 40px;
-    text-align: justify;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    /* text-align: justify; */
 
   }
   .start {

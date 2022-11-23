@@ -116,9 +116,9 @@ function GoToNext() {
         });
     }
      
-    return (
+    return (<>
+            <div className ="topright"><img src='/RSImage.png'></img></div>
             <div className='app_'>
-                <div className ="topright"><img src={require('./images/RSImage.png')}></img></div>
                 <div className='login'>
                     <h2 className='title'>Login</h2>
                     <form onSubmit={onSignInSubmit}>
@@ -138,7 +138,8 @@ function GoToNext() {
                     </form>
                 </div>
             </div>
-        );
+            <div className ="bottomright"><img src='/logo.jpg' width="100px"></img></div>
+        </>);
     
 
 }
