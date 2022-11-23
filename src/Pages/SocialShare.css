@@ -1,0 +1,21 @@
+.social-buttons {
+    margin-top: 2px;
+    display: flex;
+    transform: translate(-150%, 18%);
+    color: red;
+  }
+
+/* ========= MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    p {
+        white-space: nowrap;
+    }
+
+    .social-buttons {
+        transform: translate(-60%, 18%);
+    }
+}

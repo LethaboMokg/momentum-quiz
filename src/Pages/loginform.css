@@ -1,0 +1,21 @@
+
+.answered {
+    margin-top: 15px;
+}
+
+.title {
+    color: #041963;
+    font-weight: 1000;
+}
+
+input::placeholder {
+    color: #041963;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    image: url('images/RSImage.png');
+
+}
