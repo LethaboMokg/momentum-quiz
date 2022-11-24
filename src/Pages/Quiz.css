@@ -4,7 +4,6 @@
 }
 
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Calibri',
@@ -12,29 +11,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 * {
   font-family: "Calibri", sans-serif;
   
 }
-/* .topright {
-    position: absolute;
-    justify-content: right;
-    top: 10px;
-    right: 10px;
-    image: url('images/RSImage.png');
-    width: 50%;
-    height: 50%;
-
-} */
 
 body {
   background-image: url('images/2.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 #root {
@@ -50,14 +37,13 @@ body {
   border-radius: 15px;
   padding: 20px;
   border: 2px solid rgb(255, 27, 34);
-  /* box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75); */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   color: #041963;
   justify-self: center;
   align-self: center;
-  /* margin: 100px 0px; */
+ 
 }
 
 .score-section {
@@ -157,8 +143,7 @@ body {
     background-color: rgb(255, 27, 34);
     color: white;
     font-size: 20px;
-    /* width: 490px;*/
-    width: 100%;
+    width: 70%;
     border-radius: 10px;
 }
 
@@ -185,18 +170,6 @@ body {
   .app_ {
     width: 80%;
   }
-/* 
-  .topr {
-    justify-self: flex-end;
-    padding: 16px;
-    
-}
-
-  .bottomr {
-    justify-self: flex-end;
-    align-self: flex-end;
-    padding: 16px;
-} */
 
   .answered {
     width: 100%;
@@ -205,7 +178,6 @@ body {
 
   .here-btn {
     white-space: nowrap;
-    /* transform: translate(-10%, 20%); */
     border: none;
   }
 }

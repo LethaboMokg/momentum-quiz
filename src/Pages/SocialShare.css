@@ -1,7 +1,6 @@
 .social-buttons {
     margin-top: 2px;
     display: inline-block;
-    transform: translate(-150%, 18%);
     color: red;
   }
 
@@ -15,7 +14,6 @@
     
    
     .social-buttons {
-        transform: translate(25%, -102%);
         display: flex;
         position: relative;
         width: 80px;

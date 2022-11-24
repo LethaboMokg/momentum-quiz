@@ -14,20 +14,13 @@ FacebookIcon,
 
 } from "react-share";
 import './SocialShare.css'
-// import { Navigate} from "react-router-dom";
 import React from 'react'
+import { useNavigate } from "react-router-dom"
 import firebase from './firebase'
-// import React, { useState } from 'react';
-
-function GoTothanks (){
-    const [GoTothanks] = React.useState(false);
-  
-    // if (goTothanks){
-    //   return <Navigate to="/Thanks"/>;
-    // }
-  }
 
 function Share() {
+
+    const navigate = useNavigate();
 
   
     return (
@@ -63,7 +56,7 @@ function Share() {
           {<br/>}
           
           {<br/>}
-         <button className='start' id='submit' onClick={() => {GoTothanks(true);}} type='button'>Next</button> 
+         <button className='start' id='submit' onClick={() => {navigate("/thanks");}} type='button'>Next</button> 
          
         </div>
 
