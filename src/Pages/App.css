@@ -80,7 +80,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
-    /* text-align: justify; */
+    text-align: left;
 
   }
   .start {

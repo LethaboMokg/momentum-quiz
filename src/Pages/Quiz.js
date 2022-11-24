@@ -97,7 +97,7 @@ function Quiz() {
 					answerOptions: [
 						{ answerText: 'Budget', isCorrect: false },
 						{ answerText: 'Estate Planning', isCorrect: false },
-						{ answerText: 'Financial Advisor', isCorrect: true },
+						{ answerText: 'Financial Adviser', isCorrect: true },
 						{ answerText: 'Wealth Management', isCorrect: false },
 					],
 				},
@@ -133,8 +133,8 @@ function Quiz() {
 					answerOptions: [
 						{ answerText: 'Banker', isCorrect: false },
 						{ answerText: 'Insurance Agent', isCorrect: false },
-						{ answerText: 'Investment Advisor', isCorrect: false },
-						{ answerText: 'Financial Advisor', isCorrect: true },
+						{ answerText: 'Investment Adviser', isCorrect: false },
+						{ answerText: 'Financial Adviser', isCorrect: true },
 					],
 				},
 				{
@@ -168,7 +168,7 @@ function Quiz() {
 					answerOptions: [
 						{ answerText: 'Balance Sheet', isCorrect: true },
 						{ answerText: 'Cash Flow', isCorrect: false },
-						{ answerText: 'CRJ', isCorrect: false },
+						{ answerText: 'Cash Receipt Journal', isCorrect: false },
 						{ answerText: 'Petty Cash', isCorrect: false },
 					],
 				},
@@ -189,7 +189,7 @@ function Quiz() {
 					],
 				},
 				{
-					questionText: 'True or false, you can lose your money when investing',
+					questionText: 'True or false. If you make the wrong investment, you can lose money',
 					answerOptions: [
 						{ answerText: 'True', isCorrect: true },
 						{ answerText: 'False', isCorrect: false },
@@ -267,7 +267,6 @@ function Quiz() {
 
 							{<br />}
 							{<br />}
-							This game was brought to you by Momentum and WeThinkCode_
 							{<br />}
                             {<br />}
 
