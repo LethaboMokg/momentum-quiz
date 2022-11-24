@@ -33,21 +33,21 @@ function Share() {
         {<br />}
 
         <div className="social-buttons">
-        <FacebookShareButton url={"https://quiz-demo-eight.vercel.app/quiz"}>
+        <FacebookShareButton url={"https://momentum-quiz.vercel.app/"}>
          <FacebookIcon size={40} round={true}/>
         </FacebookShareButton>
 
-        <WhatsappShareButton url={"https://quiz-demo-eight.vercel.app/quiz"}>
+        <WhatsappShareButton url={"https://momentum-quiz.vercel.app/"}>
                  <WhatsappIcon size={40} round={true}/>
                 </WhatsappShareButton>
 
-        <LinkedinShareButton url={"https://quiz-demo-eight.vercel.app/quiz"}>
+        <LinkedinShareButton url={"https://momentum-quiz.vercel.app/"}>
                                  <LinkedinIcon size={40} round={true}/>
          </LinkedinShareButton>
-         <TwitterShareButton url={"https://quiz-demo-eight.vercel.app/quiz"}>
+         <TwitterShareButton url={"https://momentum-quiz.vercel.app/"}>
                                           <TwitterIcon size={40} round={true}/>
          </TwitterShareButton>
-         <TelegramShareButton url={"https://quiz-demo-eight.vercel.app/quiz"}>
+         <TelegramShareButton url={"https://momentum-quiz.vercel.app/"}>
                                           <TelegramIcon size={40} round={true}/>
          </TelegramShareButton>
          
