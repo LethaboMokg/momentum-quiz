@@ -4,7 +4,7 @@ import Loginform from "./Pages/loginform";
 import Quiz from "./Pages/Quiz";
 import SocialShare from "./Pages/SocialShare";
 import Thanks from "./Pages/thanks";
-
+import Answers  from "./Pages/Answers"
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path = "/SocialShare" element ={<SocialShare/>}/>
+        <Route path = "/Answers" element ={<Answers/>}/>
         <Route path="/thanks" element={<Thanks />} />
       </Routes>
     </Router>

@@ -4,10 +4,96 @@ import { useNavigate } from "react-router-dom"
 import { getAuth } from "firebase/auth";
 import { getDatabase, ref, set, get, child, DataSnapshot } from "firebase/database";
 import firebase from './firebase'
+import {setDictionaryAnswers} from "./globals"
 
 
 let form = {}
 let quizAnswers = {}
+let ansQuiz = {}
+
+const questions = [
+	{
+		questionText: 'If you had a chance to make an investment. What would you choose',
+		answerOptions: [
+			{ answerText: 'Unit trusts', isCorrect: false },
+			{ answerText: 'Stocks', isCorrect: true },
+			{ answerText: 'Offshore accounts', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'What percentage of South Africans use side hustles to make their money moves',
+		answerOptions: [
+			{ answerText: '11%', isCorrect: true },
+			{ answerText: '25%', isCorrect: false },
+			{ answerText: '50%', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'What do we call the individual who advises clients on the best way to make money moves',
+		answerOptions: [
+			{ answerText: 'An investment banker', isCorrect: false },
+			{ answerText: 'An insurance agent', isCorrect: false },
+			{ answerText: 'An investment Adviser', isCorrect: false },
+			{ answerText: 'A Financial Adviser', isCorrect: true },
+		],
+	},
+	{
+		questionText: 'How do we ensure that our money works for us',
+		answerOptions: [
+			{ answerText: 'Buying gold', isCorrect: false },
+			{ answerText: 'Budget', isCorrect: false },
+			{ answerText: 'Having a Financial Plan', isCorrect: true },
+			{ answerText: 'Having Investments', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'How do you ensure that your household is financially well for rainy days ',
+		answerOptions: [
+			{ answerText: 'Budgeting', isCorrect: false },
+			{ answerText: 'Saving', isCorrect: true },
+			{ answerText: 'Stashing money under a mattress', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'What\'s a detailed plan of income and expenses expected over a certain period',
+		answerOptions: [
+			{ answerText: 'A budget', isCorrect: true },
+			{ answerText: 'A financial Plan', isCorrect: false},
+			{ answerText: 'A Taxonomy', isCorrect: false },
+			{ answerText: 'Investments', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'What is the formula to financial success',
+		answerOptions: [
+			{ answerText: 'Advice, a plan and a budget', isCorrect: true },
+			{ answerText: 'Budgeting tool', isCorrect: false },
+			{ answerText: 'Being lucky', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'True or False. Only 6% of South Africans can retire well',
+		answerOptions: [
+			{ answerText: 'True', isCorrect: true },
+			{ answerText: 'False', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'True or false, Compound interest is the interest you earn on interest',
+		answerOptions: [
+			{ answerText: 'True', isCorrect: true },
+			{ answerText: 'False', isCorrect: false },
+		],
+	},
+	{
+		questionText: 'It’s Black Friday today, what kind of a shopper are you',
+		answerOptions: [
+			{ answerText: 'I walk in with a list ', isCorrect: true },
+			{ answerText: 'I just buy whatever ', isCorrect: false },
+			{ answerText: 'I only buy what I have budgeted for', isCorrect: false },
+		],
+	},
+];
 
 
 //saves form info
@@ -55,7 +141,10 @@ function Quiz() {
 	const [state, setState] = useState('');
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [answer, setAnswer] = useState(0);
 	const [showScore, setShowScore] = useState(false);
+
+	const [quizAns, setQuizAns] = useState(false);
 	
 	const [passed ,setPassed] = useState(false);
 	const navigate = useNavigate();
@@ -87,129 +176,17 @@ function Quiz() {
 		return (<p>Error</p>);
 	} else {
 		if (state === 'user exists') {
-			return (<p>You already completed a quiz, your previous score was {score}</p>);
+			return (<>
+			<div className='app_'>
+			<p>You already completed a quiz, your previous score was {score}</p>
+			<button className="answered here-btn" type="button"onClick={(e) => {e.preventDefault();window.location.href='https://www.momentum.co.za/planner/type/mfp'; }}> Connect to an Adviser</button>
+			<div><button className="answered" onClick={() => {navigate("/SocialShare");}}>Share</button></div>
+			</div>
+			</>);
 		} else {
 
 
-			const questions = [
-				{
-					questionText: 'How do you ensure that your financial affairs are in order should you pass',
-					answerOptions: [
-						{ answerText: 'Budget', isCorrect: false },
-						{ answerText: 'Estate Planning', isCorrect: false },
-						{ answerText: 'Financial Adviser', isCorrect: true },
-						{ answerText: 'Wealth Management', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'How do we prepare ourselves for a time when we can no longer work',
-					answerOptions: [
-						{ answerText: 'Risk Management', isCorrect: false },
-						{ answerText: 'Retirement Planning', isCorrect: true },
-						{ answerText: 'Estate Planning', isCorrect: false },
-						{ answerText: 'Wealth Manangement', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'What do we call all the things that we own',
-					answerOptions: [
-						{ answerText: 'Assets', isCorrect: true },
-						{ answerText: 'Budget', isCorrect: false },
-						{ answerText: 'Gold', isCorrect: false },
-						{ answerText: 'Investments', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'How do we ensure that our money works for us',
-					answerOptions: [
-						{ answerText: 'Gold', isCorrect: false },
-						{ answerText: 'Budget', isCorrect: false },
-						{ answerText: 'Financial Plan', isCorrect: false },
-						{ answerText: 'Investments', isCorrect: true },
-					],
-				},
-				{
-					questionText: 'What do we call the individual who advises clients on the best way to make money moves',
-					answerOptions: [
-						{ answerText: 'Banker', isCorrect: false },
-						{ answerText: 'Insurance Agent', isCorrect: false },
-						{ answerText: 'Investment Adviser', isCorrect: false },
-						{ answerText: 'Financial Adviser', isCorrect: true },
-					],
-				},
-				{
-					questionText: 'What\'s a detailed plan of income and expenses expected over a certain period of time',
-					answerOptions: [
-						{ answerText: 'Budget', isCorrect: false },
-						{ answerText: 'Financial Plan', isCorrect: true},
-						{ answerText: 'Taxonomy', isCorrect: false },
-						{ answerText: 'Investments', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'Who analyzes clients\' overall financial situations',
-					answerOptions: [
-						{ answerText: 'Insurance Agent', isCorrect: false },
-						{ answerText: 'Budget Analyst', isCorrect: false },
-						{ answerText: 'Wealth Manager', isCorrect: false },
-						{ answerText: 'Financial Planner', isCorrect: true },
-					],
-				},
-				{
-					questionText: 'Imagine that the interest rate on your savings account was 1% per year and inflation (the pace at which prices increase) was 2% per year. After 1 year, would you be able to buy more than, exactly the same as, or less than today with the money in this account',
-					answerOptions: [
-						{ answerText: 'More than today', isCorrect: false },
-						{ answerText: 'Exactly the same as today', isCorrect: false },
-						{ answerText: 'Less than today', isCorrect: true },
-					],
-				},
-				{
-					questionText: 'What do we call a  list of assets and liabilities at a specific point of time ',
-					answerOptions: [
-						{ answerText: 'Balance Sheet', isCorrect: true },
-						{ answerText: 'Cash Flow', isCorrect: false },
-						{ answerText: 'Cash Receipt Journal', isCorrect: false },
-						{ answerText: 'Petty Cash', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'Considering a long time period (for example 10 or 20 years), which asset described below normally gives the highest return',
-					answerOptions: [
-						{ answerText: 'Savings account', isCorrect: false },
-						{ answerText: 'Government bonds', isCorrect: false },
-						{ answerText: 'Shares', isCorrect: true },
-					],
-				},
-				{
-					questionText: 'When a person invests his or her money among different things (assets), does the risk of losing a lot of money increase, decrease or stay the same',
-					answerOptions: [
-						{ answerText: 'Increase', isCorrect: false },
-						{ answerText: 'Decrease', isCorrect: true },
-						{ answerText: 'Stay the same', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'True or false. If you make the wrong investment, you can lose money',
-					answerOptions: [
-						{ answerText: 'True', isCorrect: true },
-						{ answerText: 'False', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'True or false, Compound interest is the interest you earn on interest',
-					answerOptions: [
-						{ answerText: 'True', isCorrect: true },
-						{ answerText: 'False', isCorrect: false },
-					],
-				},
-				{
-					questionText: 'Which of these definitions are correct for Consumer Price Index (CPI)',
-					answerOptions: [
-						{ answerText: 'The amount of money that is needed to pay for or buy something', isCorrect: false },
-						{ answerText: 'Shows how the average price level of all those goods and services (a fixed basket of goods and services) bought by a typical consumer or household changes over time', isCorrect: true },
-					],
-				},
-			];
+			
 		
 			
 			const handleAnswerOptionClick = (isCorrect, answer_op) => {
@@ -226,15 +203,23 @@ function Quiz() {
 				//modify to save users answers and questions plus userID
 		
 				quizAnswers[answer_op] =  questions[currentQuestion].questionText
+				ansQuiz[questions[currentQuestion].questionText] = answer_op
 				console.log(questions[currentQuestion].questionText)
 		
 				const nextQuestion = currentQuestion + 1;
 				if (nextQuestion < questions.length) {
-					setCurrentQuestion(nextQuestion);
+					// TODO: color the buttons based on correctness of answer
+					// also, deactivate the buttons
+					setAnswer(answer_op);
+					setTimeout(() => {setCurrentQuestion(nextQuestion)}, 1000);
 				} else {	
 					console.log(quizAnswers)
 					saveUserData(score);
 					setShowScore(true);
+
+					setDictionaryAnswers(questions, ansQuiz);
+					
+
 				}
 		
 				//do other things here
@@ -259,7 +244,7 @@ function Quiz() {
 							<b>CONGRATULATIONS</b>
 							{<br />}
                             {<br />}
-							You have successfully completed our make your money move quiz.
+							You have successfully completed our make your money move quiz. Well done!
 		                    {<br />}
 							{<br />}
 						   
@@ -272,9 +257,10 @@ function Quiz() {
 
 							<button className="answered here-btn" type="button"onClick={(e) => {e.preventDefault();window.location.href='https://www.momentum.co.za/planner/type/mfp'; }}> Connect to an Adviser</button>
 						</div>
-						
-		
+
+
 						<div><button className="answered" onClick={() => {navigate("/SocialShare");}}>Share</button></div>
+						<div><button className="answered here-btn" onClick={()=> {navigate("/Answers")}}>Show Answers</button></div>
 		</>
 		
 					) : (

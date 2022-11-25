@@ -28,7 +28,7 @@ function Share() {
 
        {<br />}
        {<br />}
-       <p>Follow #SuccessIsAScience on our social media platforms for more tips, insights and tools that will empower you for success.</p>
+       <p>The conversation continues on #SuccessIsAScience. Stay on our TL for more tips, insights and tools that will empower you for success. </p>
         {<br />}
         {<br />}
 

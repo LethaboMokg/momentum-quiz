@@ -22,12 +22,15 @@ function Home (){
      
       <div className='content'>
         <h1><i>Instructions:</i></h1>
-        <p>1. Select only one of the available options.</p>
-        <p>2. Answer all questions.</p>
+        <ol>
+          <li>Select only one of the available options.</li>
+          <li>Answer all questions.</li>
+        </ol>
       </div>
 
       
-      <br/>
+      {/* <br/> */}
+      {/* <br/> */}
      
       <input type="checkbox" id="" name="terms" value="" required></input>
       <label for=""> I agree to all the <a href="https://www.momentum.co.za/momentum/support/terms-and-conditions">Terms and Conditions</a></label>
