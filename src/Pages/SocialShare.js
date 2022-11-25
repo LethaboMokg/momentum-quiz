@@ -56,7 +56,7 @@ function Share() {
           {<br/>}
           
           {<br/>}
-         <button className='start' id='submit' onClick={() => {navigate("/thanks");}} type='button'>Next</button> 
+         <button className='start_' id='submit' onClick={() => {navigate("/thanks");}} type='button'>Next</button> 
          
         </div>
 
