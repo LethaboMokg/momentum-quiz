@@ -33,17 +33,17 @@ const questions = [
 		answerOptions: [
 			{ answerText: 'An investment banker', isCorrect: false },
 			{ answerText: 'An insurance agent', isCorrect: false },
-			{ answerText: 'An investment Adviser', isCorrect: false },
-			{ answerText: 'A Financial Adviser', isCorrect: true },
+			{ answerText: 'An investment adviser', isCorrect: false },
+			{ answerText: 'A financial adviser', isCorrect: true },
 		],
 	},
 	{
-		questionText: 'How do we ensure that our money works for us',
+		questionText: 'How do you think Momentum makes its money moves',
 		answerOptions: [
-			{ answerText: 'Buying gold', isCorrect: false },
-			{ answerText: 'Budget', isCorrect: false },
-			{ answerText: 'Having a Financial Plan', isCorrect: true },
-			{ answerText: 'Having Investments', isCorrect: false },
+			{ answerText: 'Having a vision', isCorrect: false },
+			{ answerText: 'Financial planning and management', isCorrect: false },
+			{ answerText: 'Trading on the JSE', isCorrect: false },
+			{ answerText: 'All of the above', isCorrect: true },
 		],
 	},
 	{
@@ -58,9 +58,9 @@ const questions = [
 		questionText: 'What\'s a detailed plan of income and expenses expected over a certain period',
 		answerOptions: [
 			{ answerText: 'A budget', isCorrect: true },
-			{ answerText: 'A financial Plan', isCorrect: false},
-			{ answerText: 'A Taxonomy', isCorrect: false },
-			{ answerText: 'Investments', isCorrect: false },
+			{ answerText: 'A financial plan', isCorrect: false},
+			{ answerText: 'A taxonomy', isCorrect: false },
+			{ answerText: 'An investment', isCorrect: false },
 		],
 	},
 	{
@@ -68,7 +68,7 @@ const questions = [
 		answerOptions: [
 			{ answerText: 'Advice, a plan and a budget', isCorrect: true },
 			{ answerText: 'Budgeting tool', isCorrect: false },
-			{ answerText: 'Being lucky', isCorrect: false },
+			{ answerText: 'Using my intuition and a little luck', isCorrect: false },
 		],
 	},
 	{
@@ -88,8 +88,8 @@ const questions = [
 	{
 		questionText: 'It’s Black Friday today, what kind of a shopper are you',
 		answerOptions: [
-			{ answerText: 'I walk in with a list ', isCorrect: true },
-			{ answerText: 'I just buy whatever ', isCorrect: false },
+			{ answerText: 'I walk in to investigate the deals ', isCorrect: true },
+			{ answerText: 'I know myself and walk in with a trolley ', isCorrect: false },
 			{ answerText: 'I only buy what I have budgeted for', isCorrect: false },
 		],
 	},
@@ -121,12 +121,6 @@ function saveUserData(score) {
 		}
 	);
 
-	// set(
-	// 	ref(db, `Users/${uid}/`),
-	// 	{
-	// 		"name": userName
-	// 	}
-	// );
 
 }
 
